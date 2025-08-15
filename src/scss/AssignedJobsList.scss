@@ -1,0 +1,150 @@
+@import 'mixins';
+
+.assigned-jobs {
+  background: $white;
+  border-radius: 6px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+
+    @include respond-to(medium) {
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    .assigned-job-actions {
+      display: flex;
+      gap: 10px;
+    }
+  }
+
+  .job-list {
+    padding: 1rem;
+
+    .job-card {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border: 1px solid #e0e0e0;
+      border-radius: 10px;
+      padding: 1rem;
+
+      @include respond-to(medium) {
+        overflow: auto;
+      }
+
+      .job-inner {
+        .secondary-btnmobile {
+          @include respond-to(medium) {
+            width: 90px;
+          margin-right: 20px;
+          }
+        }
+
+        .job-info-title {
+          @include respond-to(medium) {
+            width: 150px;
+          }
+        }
+      }
+
+      .job-inner-first {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 15px;
+
+        .avatar {
+          background: rgb(255, 211, 130);
+          color: #ff3d00;
+          border-radius: 20px;
+          padding: 5px 10px;
+          font-size: 16px;
+          font-weight: 600;
+        }
+
+        .job-title {
+          font-size: 16px;
+          font-weight: 600;
+
+          @include respond-to(medium) {
+            font-size: 11px;
+          }
+        }
+
+      }
+
+      .job-inner-second {
+        display: flex;
+        flex-direction: column;
+
+        span {
+          font-size: 14px;
+          color: #494949;
+
+          @include respond-to(medium) {
+            font-size: 11px;
+            width: 150px;
+          }
+        }
+      }
+
+      .job-subtitle {
+        font-size: 14px;
+        color: #494949;
+      }
+
+      .status {
+        background: #efefef;
+        padding: 5px 10px 7px;
+        border-radius: 10px;
+        font-size: 14px;
+
+        @include respond-to(medium) {
+          font-size: 11px;
+          width: 150px;
+          text-align: center;
+          margin-right: 30px;
+        }
+      }
+
+      .toggle-btn {
+        width: 44px;
+        height: 24px;
+        background: #ccc;
+        border-radius: 24px;
+        position: relative;
+        cursor: pointer;
+        transition: background 0.3s ease;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 2px;
+          left: 2px;
+          width: 20px;
+          height: 20px;
+          background: white;
+          border-radius: 50%;
+          transition: transform 0.3s ease;
+        }
+
+        &.active {
+          background: $primary-color;
+
+          &::before {
+            transform: translateX(20px);
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+@import 'mixins';
+
+.primary-btn {
+  @include button-style(#007bff, #fff);
+  @include respond-to(medium) {
+      padding: 7px 10px;
+       font-size: 11px;
+  }
+}
+
+.secondary-btn {
+  @include button-style(#fff, #6c757d);
+  @include respond-to(medium) {
+       padding: 7px 10px;
+       font-size: 11px;
+  }
+}
+
+.red-btn {
+  @include button-style(rgb(239 184 184), red);
+  @include respond-to(medium) {
+      padding: 7px 10px;
+       font-size: 11px;
+  }
+}

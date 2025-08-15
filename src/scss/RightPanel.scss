@@ -1,0 +1,124 @@
+.right-panel {
+  background: #fff;
+  padding: 10px 0;
+  width: 350px;
+  border-left: 1px solid #e5e7eb;
+  font-family: Arial, sans-serif;
+  @include respond-to(medium) {
+    width: 100%;
+  }
+
+  .icon-menu {
+    display: flex;
+    gap: 15px;
+    padding: 0 10px;
+    margin-bottom: 10px;
+
+    i {
+      font-size: 20px;
+    color: #2679e1;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 50%;
+    background: #93c0ef;
+    transition: 0.2s;
+
+      &:hover {
+        background: #e0e0e0;
+      }
+    }
+  }
+
+  .tabs-right {
+        display: flex;
+    background: #ccc;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    @include respond-to(medium) {
+      justify-content: flex-start;
+    }
+    span {
+      font-size: 14px;
+      color: #494949;
+      @include respond-to(medium) {
+        padding: 7px;
+      }
+      &.active {
+        color: #1070ca;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .notes-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 0 10px;
+
+    .note-card {
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      padding: 12px;
+      background: #fff;
+
+      .note-tags {
+        display: flex;
+        gap: 6px;
+        margin-bottom: 8px;
+
+        .tag {
+          font-size: 10px;
+          padding: 2px 6px 2px 0;
+          border-radius: 4px;
+        }
+        .note-type {
+          color: #007bff;
+          i {
+             color: #2679e1;
+            padding: 4px;
+            border-radius: 50%;
+            background: #93c0ef;
+            margin-right: 4px;
+          }
+        }
+        .todo {
+          background: #fce9e9;
+          color: #d93025;
+          padding: 5px;
+        }
+      }
+
+      .note-text {
+        font-size: 13px;
+        color: #333;
+        margin-bottom: 6px;
+      }
+
+      .association-link {
+        font-size: 13px;
+        color: #007bff;
+        text-decoration: none;
+        margin-bottom: 8px;
+        display: inline-block;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      .note-footer {
+        display: flex;
+        justify-content: space-between;
+        font-size: 12px;
+        color: #666;
+
+        i {
+          margin-right: 4px;
+        }
+      }
+    }
+  }
+}
