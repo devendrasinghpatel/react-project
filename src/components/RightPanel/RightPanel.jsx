@@ -19,7 +19,6 @@ export default function RightPanel() {
         <i className="bx bx-phone"></i>
         <i className="bx bx-check-circle"></i>
         <i className="bx bx-calendar-alt"></i>
-        <i className="bx bx-file"></i>
       </div>
 
       <div className="tabs-right">
