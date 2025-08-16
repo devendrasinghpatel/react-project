@@ -1,12 +1,9 @@
-/* Overlay */
 .modal-overlay {
   position: fixed;
   inset: 0;
   background: rgba(17, 24, 39, 0.55);
-  /* smoky backdrop */
   display: flex;
   align-items: flex-end;
-  /* start near bottom for slide-up feel */
   justify-content: center;
   z-index: 1000;
   animation: fadeIn 220ms ease-out;
@@ -16,7 +13,6 @@
   }
 }
 
-/* Dialog */
 .modal-content {
   background: #fff;
   width: min(900px, 92vw);
@@ -37,7 +33,6 @@
   animation: slideUp 280ms cubic-bezier(.2, .8, .2, 1);
 }
 
-/* Header */
 .modal-header {
   display: flex;
   align-items: center;
@@ -69,7 +64,6 @@
   }
 }
 
-/* Body */
 .modal-body {
   padding: 16px 18px 2px;
   overflow-y: auto;

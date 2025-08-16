@@ -34,7 +34,6 @@ export default function RightPanel() {
         ))}
       </div>
 
-      {/* Notes List */}
       <div className="notes-list">
         {filteredNotes.map((note, i) => (
           <div className="note-card" key={i}>

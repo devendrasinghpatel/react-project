@@ -3,7 +3,6 @@ import EditCandidateModal from "../EditCandidateModal/EditCandidateModal";
 import { useCandidate } from "../context/CandidateContext";
 
 export default function CandidateDetails() {
-  // This header data (name/role) remains display-only
   const headerName = "William Sample";
   const headerRole = "Senior Product Manager • Dallas, USA";
 
@@ -31,7 +30,6 @@ export default function CandidateDetails() {
             </div>
           </div>
 
-          {/* Keep ALL original buttons intact */}
           <div className="profile-actions">
             <button type="button" className="red-btn">Contact Linked</button>
             <button type="button" className="secondary-btn">
@@ -53,7 +51,6 @@ export default function CandidateDetails() {
           </div>
         </div>
 
-        {/* CONTACT BAR (reads from context) */}
         <div className="contact-bar">
           <div className="contact-bar-group contact-bar-group-left">
             <div className="contact-bar-item">
@@ -84,7 +81,6 @@ export default function CandidateDetails() {
           </div>
         </div>
 
-        {/* INFO GRID (reads from context) */}
         <div className="info-grid">
           <div className="info-item">
             <strong>Current Organization</strong>

@@ -6,14 +6,11 @@ export default function EditCandidateModal({ onClose }) {
   const [formData, setFormData] = useState(state);
   const contentRef = useRef(null);
 
-  // Close on ESC
   useEffect(() => {
     const onKey = (e) => e.key === "Escape" && onClose();
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
   }, [onClose]);
-
-  // Prevent overlay click from closing when clicking inside the card
   const stop = (e) => e.stopPropagation();
 
   const handleChange = (e) => {
@@ -26,7 +23,6 @@ export default function EditCandidateModal({ onClose }) {
     onClose();
   };
 
-  // Fields you requested (contact-bar + info-grid) in nice groups
   const contactFields = [
     { name: "email", label: "Email", type: "email" },
     { name: "phone", label: "Phone", type: "text" },

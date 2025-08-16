@@ -1,16 +1,4 @@
 
-// export default function MobileMenu({ open, onClose }) {
-//   return (
-//     <div className={`mobile-menu ${open ? "open" : ""}`}>
-//       <button className="close-btn" onClick={onClose}>✕</button>
-//       <div className="menu-content">
-//         <input type="text" placeholder="Search Pipeline" />
-//         <button className="update-btn">Request Profile Update</button>
-//         <img src="/user.jpg" alt="User" className="avatar" />
-//       </div>
-//     </div>
-//   );
-// }
 
 import searchImg from "../../assets/images/search.png";
 import pluscircle from "../../assets/images/plus.png";

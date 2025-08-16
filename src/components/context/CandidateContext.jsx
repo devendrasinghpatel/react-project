@@ -3,7 +3,6 @@ import { createContext, useContext, useReducer } from "react";
 const CandidateContext = createContext();
 
 const initialState = {
-  // Only fields you asked to edit: contact-bar + info-grid
   email: "dev@gmail.com",
   phone: "7217620199",
   contactPerson: "Devendra",
