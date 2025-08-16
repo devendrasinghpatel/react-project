@@ -1,29 +1,28 @@
 @import 'mixins';
+
 .candidate-profile {
-    // display: flex;
-    // flex-direction: column;
-    height: 100vh;
-  
-    .main-content {
-      display: flex;
-      flex: 1;
-      overflow: hidden;
-      margin-left: 60px;
-  
-      .content-body {
-        flex: 1;
-        padding: 1rem 0;
-        overflow-y: auto;
-      }
+  // display: flex;
+  // flex-direction: column;
+  height: 100vh;
+
+  .main-content {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+    margin-left: 60px;
+
+    @include respond-to(medium) {
+      flex-direction: column;
     }
-  
-    @media (max-width: 768px) {
-      .main-content {
-        flex-direction: column;
-  
-        .content-body {
-          order: 1;
-        }
+
+    .content-body {
+      flex: 1;
+      padding: 1rem 0;
+      overflow-y: auto;
+
+      @include respond-to(medium) {
+        order: 1;
       }
     }
   }
+}
